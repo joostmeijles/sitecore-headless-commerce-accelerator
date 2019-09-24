@@ -322,17 +322,17 @@
     <Reference Include="Sitecore.Framework.Configuration.Extensions, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Sitecore.Framework.Configuration.Extensions.5.2.0\lib\netstandard2.0\Sitecore.Framework.Configuration.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.JavaScriptServices.Configuration, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.Configuration.12.1.0\lib\net471\Sitecore.JavaScriptServices.Configuration.dll</HintPath>
+    <Reference Include="Sitecore.JavaScriptServices.Configuration, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.Configuration.12.0.1\lib\net471\Sitecore.JavaScriptServices.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.JavaScriptServices.Core, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.Core.12.1.0\lib\net471\Sitecore.JavaScriptServices.Core.dll</HintPath>
+    <Reference Include="Sitecore.JavaScriptServices.Core, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.Core.12.0.1\lib\net471\Sitecore.JavaScriptServices.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.JavaScriptServices.Globalization, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.Globalization.12.1.0\lib\net471\Sitecore.JavaScriptServices.Globalization.dll</HintPath>
+    <Reference Include="Sitecore.JavaScriptServices.Globalization, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.Globalization.12.0.1\lib\net471\Sitecore.JavaScriptServices.Globalization.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.JavaScriptServices.ViewEngine, Version=12.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.ViewEngine.12.1.0\lib\net471\Sitecore.JavaScriptServices.ViewEngine.dll</HintPath>
+    <Reference Include="Sitecore.JavaScriptServices.ViewEngine, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Sitecore.JavaScriptServices.ViewEngine.12.0.1\lib\net471\Sitecore.JavaScriptServices.ViewEngine.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Sitecore.Kernel.9.1.1\lib\net471\Sitecore.Kernel.dll</HintPath>
