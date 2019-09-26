@@ -18,9 +18,9 @@ Sitecore.Parameters.InitParams(
     context: Context,
     msBuildToolVersion: MSBuildToolVersion.Default,
     solutionName: "Wooli",
-    scSiteUrl: "https://sc9.local", // default URL exposed from the box
+    scSiteUrl: "http://sitecore", // default URL exposed from the box
     unicornSerializationRoot: "unicorn-wooli",
-    publishingTargetDir: "C:\\inetpub\\wwwroot\\XP0.sc" // path to the Sitecore instance
+    publishingTargetDir: "..\\wwwroot\\sitecore" // path to the Sitecore instance
 );
 
 // //////////////////////////////////////////////////
@@ -74,7 +74,7 @@ Task("Default") // LocalDev
     .IsDependentOn("000-Clean")
     .IsDependentOn("001-Restore")
     .IsDependentOn("002-Build")
-    .IsDependentOn("003-Tests") // comment this line if deploy process fails on this step
+    //.IsDependentOn("003-Tests") // comment this line if deploy process fails on this step
     //.IsDependentOn("004-Packages")
     .IsDependentOn("005-Publish")
     .IsDependentOn("006-Sync-Content"); // comment this line if deploy process fails on this step

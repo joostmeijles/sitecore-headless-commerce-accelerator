@@ -137,3 +137,6 @@ Code Generation Templates/*.tt
 #Idea
 /.idea
 
+data/
+wwwroot/
+logs/

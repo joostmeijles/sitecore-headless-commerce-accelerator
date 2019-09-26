@@ -1,0 +1,80 @@
+version: '2.4'
+
+services:
+ identity:
+  image: "avivasolutionsnl.azurecr.io/sitecore-xc-identity:9.1.0-20190904"
+  command: -commerceHostname commerce -sitecoreHostname sitecore -identityHostname identity
+  networks:
+    exampleNetwork:
+      aliases:
+        - identity
+  volumes:
+    - .\src:C:\license
+  depends_on:
+    - mssql
+
+ commerce:
+  image: "avivasolutionsnl.azurecr.io/sitecore-xc-commerce-wooli:9.1.0-20190924"
+  mem_limit: 4096m
+  cpu_count: 6
+  command: -commerceHostname commerce -sitecoreHostname sitecore -identityHostname identity
+  networks:
+    exampleNetwork:
+      aliases:
+        - commerce
+  depends_on:
+    - xconnect
+    - mssql
+    - solr
+    - sitecore
+    - identity
+
+ mssql:
+  image: "avivasolutionsnl.azurecr.io/sitecore-xc-mssql-jss-wooli:9.1.0-20190924"
+  mem_limit: 4096m
+  cpu_count: 4
+  networks:
+    - exampleNetwork 
+  environment:
+    ACCEPT_EULA: "Y"
+    sa_password: my_Sup3rSecret!!
+  
+ sitecore:
+  image: "avivasolutionsnl.azurecr.io/sitecore-xc-sitecore-jss-wooli:9.1.0-20190924"
+  mem_limit: 8192m
+  cpu_count: 6
+  command: -commerceHostname commerce -identityHostname identity
+  networks:
+    exampleNetwork:
+      aliases:
+        - sitecore
+        - wooli.local
+  volumes:
+    - .\src:C:\license    
+  depends_on:
+    - xconnect
+    - mssql
+    - solr
+    - identity
+  
+ solr:
+  image: "avivasolutionsnl.azurecr.io/sitecore-xc-solr-wooli:9.1.0-20190924"
+  mem_limit: 4096m
+  cpu_count: 4
+  networks:
+    - exampleNetwork 
+  
+ xconnect:
+  image: "avivasolutionsnl.azurecr.io/sitecore-xc-xconnect:9.1.0-20190904"
+  networks:
+    - exampleNetwork 
+  volumes:
+    - .\src:C:\license    
+  depends_on:
+    - mssql
+    - solr
+
+networks:
+  exampleNetwork:
+    external:
+      name: nat
